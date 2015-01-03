@@ -1,7 +1,10 @@
+Cajas: 
+
+
 Comandos para Node JS para  creal los  css  a partir de los .styl:
 
 1 - stylus estilo.styl   // si es que estamos con el cmd dentro de la carpeta
 
 2- stylus --watch stylus/main.styl
 
-3- stylus stylus/main.styl --out /css --compress   // en caso de no estar dentro de la carpeta directamente .  
+3- stylus stylus/main.styl --out /css --compress   // en caso de no estar dentro de la carpeta directamente .
