@@ -14,6 +14,10 @@ header
 	overflow hidden
 	padding 0.5em
 	position relative
+	/*la sombra del NAV se la pongo al header porque cae sobre el nav al desplazarse hacia abajo.*/
+	box-shadow 0 5px 0 rgba(0,0,0,0.2)
+	z-index 1
+
 	
 	.logo
 		border-right 1px solid azul
@@ -76,6 +80,39 @@ header
 	
 nav
 	background azul
+	border-left 15px solid white
+	position relative /* necesaria si abajo uso absolute */
+
+	&:before 
+		/*flecha creada con bordes*/
+		border-bottom 20px solid transparent
+		border-left 7px solid white
+		border-top 20px solid transparent	
+		content "" /* contenido vacio debe ir*/
+		left 0
+		position absolute
+		top 0
+
+	.menu
+		
+		height 40px
+		line-height 40px
+		margin 0
+		padding 0
+		overflow-x auto /* none para no ver el sctoll */
+		white-space nowrap
+		
+		li
+			display inline-block
+			
+			a
+				color white
+				display inline-block
+				margin 0 0.5em
+				padding 0.3em
+				text-decoration none
+				
+				
 	
 .left
 	float left

@@ -10,6 +10,9 @@ header {
   overflow: hidden;
   padding: 0.5em;
   position: relative;
+/*la sombra del NAV se la pongo al header porque cae sobre el nav al desplazarse hacia abajo.*/
+  box-shadow: 0 5px 0 rgba(0,0,0,0.2);
+  z-index: 1;
 }
 header .logo {
   border-right: 1px solid #22bce0;
@@ -71,6 +74,36 @@ header .flechita {
 }
 nav {
   background: #22bce0;
+  border-left: 15px solid #fff;
+  position: relative;
+}
+nav:before {
+/*flecha creada con bordes*/
+  border-bottom: 20px solid transparent;
+  border-left: 7px solid #fff;
+  border-top: 20px solid transparent;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+nav .menu {
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+nav .menu li {
+  display: inline-block;
+}
+nav .menu li a {
+  color: #fff;
+  display: inline-block;
+  margin: 0 0.5em;
+  padding: 0.3em;
+  text-decoration: none;
 }
 .left {
   float: left;
