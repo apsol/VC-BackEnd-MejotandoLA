@@ -117,12 +117,44 @@ nav .menu li a {
   box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
   color: #7a7a7a;
   margin-bottom: 0.5em;
+/* Para la parte inferior del Article */
 }
 .posts .post .acciones {
   border-top: 3px solid #22bce0;
+  padding: 0.5em;
+  overflow: hidden;
+/* Para la parte superior del Article */
+}
+.posts .post .acciones .datos {
+  float: left;
+}
+.posts .post .acciones .datos .comentarios {
+  background: #7a7a7a;
+  border-radius: 3px;
+  color: #fff;
+  margin: 0 1em 0 0;
+  padding: 2px 5px;
+  text-decoration: none;
+}
+.posts .post .acciones .votos {
+  float: right;
+/* aplico herencia a CSS  para las clases DOWN y UP */
+}
+.posts .post .acciones .votos .down,
+.posts .post .acciones .votos .up {
+  text-decoration: none;
+}
+.posts .post .acciones .votos .down {
+  color: #f00;
+}
+.posts .post .acciones .votos .up {
+  color: #008000;
 }
 .posts .post .descripcion {
   color: #7a7a7a;
+}
+.posts .post .descripcion .acciones {
+  border-top: 3px solid #22bce0;
 }
 .posts .post .descripcion .detalles {
   height: 160px;

@@ -127,12 +127,42 @@ nav
 		color gris_texto
 		margin-bottom 0.5em
 		
+		/* Para la parte inferior del Article */
 		.acciones
 			border-top 3px solid azul
+			padding 0.5em
+			overflow hidden /* fundamental para que el contenedor se adapte al tamanio del  texto ,  sililar al clar:boot */
+			.datos
+				float left
+				
+				.comentarios
+					background gris_texto
+					border-radius 3px
+					color white
+					margin 0 1em 0 0
+					padding 2px 5px
+					text-decoration none
+					
 
+			.votos
+				float right
+				
+				/* aplico herencia a CSS  para las clases DOWN y UP */
+				.down 
+				.up  
+					text-decoration none
+				.down
+					color red
+				.up
+					color green
+
+			/* Para la parte superior del Article */
 		.descripcion
 			color gris_texto
 			
+			.acciones
+				border-top 3px solid azul
+				
 			.detalles
 				height 160px
 				margin-left 130px
