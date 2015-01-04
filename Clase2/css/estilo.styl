@@ -1,6 +1,8 @@
 azul = #22BCE0
 gris_oscuro = #444
+gris_texto = #7A7A7A
 naranja = #DD4F24
+
 
 body
     background #E8E8E8	
@@ -112,7 +114,62 @@ nav
 				padding 0.3em
 				text-decoration none
 				
+.posts
+	padding 0.5em
+	
+	a
+		color naranja
+
+	.post
+		background white
+		border-radius 0 0 0.5em 0.5em
+		box-shadow 2px 2px 10px rgba(black, 0.5)
+		color gris_texto
+		margin-bottom 0.5em
+		
+		.acciones
+			border-top 3px solid azul
+
+		.descripcion
+			color gris_texto
+			
+			.detalles
+				height 160px
+				margin-left 130px
 				
+				.autor
+					margin 0.5em 0 0.5em 0
+				
+				.fecha
+					float right
+					margin 0 1em 0 0
+
+				.tag 
+					background azul
+					border-radius 0.5em
+					color white
+					padding 0.2em 0.5em
+					text-decoration none
+
+				.titulo
+					color gris_oscuro
+					font-size 18px
+					font-style italic
+					margin 0 /* todos los contenedores H tienen margen por defecto, en ocaciones hay que sacarlos. Aparece cuando se usa Float left en la imagen u otra cosa */
+					padding 0.5em 0.5em 0 0
+			.imagen
+				float left
+				
+				img
+					height 160px
+					vertical-align top
+					width 120px
+				
+
+
+
+
+
 	
 .left
 	float left

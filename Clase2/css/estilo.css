@@ -105,6 +105,58 @@ nav .menu li a {
   padding: 0.3em;
   text-decoration: none;
 }
+.posts {
+  padding: 0.5em;
+}
+.posts a {
+  color: #dd4f24;
+}
+.posts .post {
+  background: #fff;
+  border-radius: 0 0 0.5em 0.5em;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  color: #7a7a7a;
+  margin-bottom: 0.5em;
+}
+.posts .post .acciones {
+  border-top: 3px solid #22bce0;
+}
+.posts .post .descripcion {
+  color: #7a7a7a;
+}
+.posts .post .descripcion .detalles {
+  height: 160px;
+  margin-left: 130px;
+}
+.posts .post .descripcion .detalles .autor {
+  margin: 0.5em 0 0.5em 0;
+}
+.posts .post .descripcion .detalles .fecha {
+  float: right;
+  margin: 0 1em 0 0;
+}
+.posts .post .descripcion .detalles .tag {
+  background: #22bce0;
+  border-radius: 0.5em;
+  color: #fff;
+  padding: 0.2em 0.5em;
+  text-decoration: none;
+}
+.posts .post .descripcion .detalles .titulo {
+  color: #444;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0;
+  padding: 0.5em 0.5em 0 0;
+}
+.posts .post .descripcion .imagen {
+  float: left;
+}
+.posts .post .descripcion .imagen img {
+  height: 160px;
+  vertical-align: top;
+  width: 120px;
+}
 .left {
   float: left;
 }
