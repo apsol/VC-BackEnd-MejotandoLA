@@ -61,6 +61,12 @@ header .titular .publicar {
   padding: 0.2em 0.5em;
   text-shadow: 1px 1px 0px #000;
 }
+header .titular .publicar:before {
+  display: inline-block;
+  font-family: "iconitos";
+  content: "\e908";
+  margin: 0 3px 0 0;
+}
 header .titular .titulo {
   font-size: 18px;
   font-weight: normal;
@@ -90,7 +96,14 @@ header .flechita {
   top: 15px;
   right: 0px;
   text-align: right;
+  text-decoration: none;
   width: 50%;
+}
+header .flechita:after {
+  font-family: "iconitos";
+  display: inline-block;
+  content: "\e600";
+  text-shadow: 1px 1px 0px #000;
 }
 nav {
   background: #22bce0;
@@ -156,19 +169,39 @@ nav .menu li a {
   padding: 2px 5px;
   text-decoration: none;
 }
+.posts .post .acciones .datos .estrellita {
+  text-decoration: none;
+}
+.posts .post .acciones .datos .estrellita:before {
+  font-family: "iconitos";
+  color: #e0e561;
+  content: "\e9d9";
+}
 .posts .post .acciones .votos {
   float: right;
+  line-height: 1.5em;
 /* aplico herencia a CSS  para las clases DOWN y UP */
 }
 .posts .post .acciones .votos .down,
 .posts .post .acciones .votos .up {
   text-decoration: none;
+  font-size: 1.5em;
 }
 .posts .post .acciones .votos .down {
   color: #f00;
 }
+.posts .post .acciones .votos .down:before {
+  font-family: "iconitos";
+  content: "\e600";
+  vertical-align: bottom;
+}
 .posts .post .acciones .votos .up {
   color: #008000;
+}
+.posts .post .acciones .votos .up:before {
+  font-family: "iconitos";
+  content: "\e601";
+  vertical-align: bottom;
 }
 .posts .post .descripcion {
   color: #7a7a7a;
@@ -208,6 +241,13 @@ nav .menu li a {
   height: 160px;
   vertical-align: top;
   width: 120px;
+}
+@font-face {
+  font-family: 'iconitos';
+  src: url("../fonts/icomoon.eot?yztnpb");
+  src: url("../fonts/icomoon.eot?#iefixyztnpb") format('embedded-opentype'), url("../fonts/icomoon.woff?yztnpb") format('woff'), url("../fonts/icomoon.ttf?yztnpb") format('truetype'), url("../fonts/icomoon.svg?yztnpb#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 .left {
   float: left;

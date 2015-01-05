@@ -67,8 +67,12 @@ header
 			margin -3px 1em 0 0
 			padding 0.2em 0.5em
 			text-shadow 1px 1px 0px	black
-
 			
+			&:before
+				display inline-block /* necesarios para usar margenes despues */
+				font-family "iconitos"
+				content "\e908"
+				margin 0 3px	0 0
 
 		.titulo
 			font-size 18px
@@ -97,7 +101,14 @@ header
 		top 15px
 		right 0px
 		text-align right
+		text-decoration none
 		width 50%
+		
+		&:after 
+			font-family "iconitos"
+			display inline-block
+			content "\e600"
+			text-shadow 1px 1px 0px black
 		
 	
 nav
@@ -163,18 +174,34 @@ nav
 					padding 2px 5px
 					text-decoration none
 					
+				.estrellita
+					text-decoration none
+					
+					&:before
+						font-family "iconitos"
+						color #E0E561
+						content "\e9d9"
 
 			.votos
 				float right
-				
+				line-height 1.5em
 				/* aplico herencia a CSS  para las clases DOWN y UP */
 				.down 
 				.up  
 					text-decoration none
+					font-size 1.5em
 				.down
 					color red
+					&:before
+						font-family "iconitos"
+						content "\e600"	
+						vertical-align bottom
 				.up
 					color green
+					&:before
+						font-family "iconitos"
+						content "\e601"
+						vertical-align bottom
 
 			/* Para la parte superior del Article */
 		.descripcion
@@ -215,10 +242,16 @@ nav
 					vertical-align top
 					width 120px
 				
-
-
-
-
+@font-face {
+	font-family: 'iconitos';
+	src:url('../fonts/icomoon.eot?yztnpb');
+	src:url('../fonts/icomoon.eot?#iefixyztnpb') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?yztnpb') format('woff'),
+		url('../fonts/icomoon.ttf?yztnpb') format('truetype'),
+		url('../fonts/icomoon.svg?yztnpb#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
 	
 .left
