@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	<div id="unicoDiv">estos es un div</div>
+	<script>
+		/* variables */
+		var a = 10;
+		var b = 20;
+		var c = a + b;
+
+		var txt1 = "C es mayor a b";
+		var txt2 = "C en menor a b";
+
+		/* estructuras de control */
+		if(c > b){
+			console.log(txt1);
+		} else {
+			console.log(txt2);	
+		}
+
+		/* funciones */
+		function log(txtCualquiera){
+			console.log(txtCualquiera);
+		}
+
+		log("Te paso este texto");
+		log("Y ESTE otro");
+		log(4534);
+
+		/* ARRAY - estructuras de datos */
+		var numeros = [0,1,2,3,4,5];
+		log(numeros);
+		numeros.push(6);
+		numeros.push(7);
+		log(numeros);
+
+		/* objetos */
+		var persona1 = {} /* puede ser o no necesario*/
+		persona1.nombre = "Carlos";
+		persona1.edad = 35;
+		persona1.pais = "uru";
+
+		var perro = {};
+		perro.nombre = "Tommy";
+		perro.raza = "Ovejero Aleman"
+		perro.edad = 12
+
+		log(persona1.nombre);
+		log(perro.nombre) + log(perro.raza) ;
+
+		/* tomar ejemplos de acceso a los objetos web */
+		
+		/* DOM Dcument Object Model*/
+		document.getElementById("unicoDiv");
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
