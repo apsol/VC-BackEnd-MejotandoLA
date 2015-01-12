@@ -58,15 +58,25 @@
 		/* DOM Dcument Object Model*/
 		document.getElementById("unicoDiv");
 
+		/* ejemplo de on windows Load */
+		function darBienvenida(){
+			alert("Bienvenido a la web");
+		}
 
+		function hacerAlgoImportante(){
+			console.log("Estoy haciendo algo importante");
+		}
 
+		function atachar(obj, evento, funcion){
+			if(obj.addEventListener){
+				obj.addEventListener(evento, funcion);
+			} else {
+				obj.attachEvent('on'+evento, funcion);
+			}
+		}
 
-
-
-
-
-
-
+		atachar(window,	'load', darBienvenida);
+		atachar(window,	'load', hacerAlgoImportante);
 	</script>
 </body>
 </html>
