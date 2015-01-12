@@ -7,7 +7,7 @@
 	<title>Puls4: Comunidad para gente atractiva y millonaria</title>
 	<link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/puls4.css" />
-	<script src="jquery-2.1.3.min.js"></script>
+	<script src="jquery-2.0.3.min.js"></script>
 </head>
 <body>
 	<header>
@@ -238,6 +238,21 @@
 			</span>
 		</h3>
 	</footer>
+	<script>
+		/* ejemplo de on windows Load usando jQuery */
+		function darBienvenida(){
+			alert("Bienvenido a la web");
+		}
+
+		function hacerAlgoImportante(){
+			console.log("Estoy haciendo algo importante");
+		}
+
+		$(window)
+			.on('load', darBienvenida);
+			.on('load', hacerAlgoImportante);
+
+	</script>
 </body>
 </html>
 

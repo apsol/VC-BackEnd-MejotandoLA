@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-
+	<script src="jquery-2.0.3.min.js"></script>
 </head>
 <body>
 	<div id="unicoDiv">estos es un div</div>
 	<script>
-		/* variables */
+
+		/*
+		// variables 
 		var a = 10;
 		var b = 20;
 		var c = a + b;
@@ -16,14 +18,14 @@
 		var txt1 = "C es mayor a b";
 		var txt2 = "C en menor a b";
 
-		/* estructuras de control */
+		// estructuras de control 
 		if(c > b){
 			console.log(txt1);
 		} else {
 			console.log(txt2);	
 		}
 
-		/* funciones */
+		// funciones
 		function log(txtCualquiera){
 			console.log(txtCualquiera);
 		}
@@ -32,15 +34,15 @@
 		log("Y ESTE otro");
 		log(4534);
 
-		/* ARRAY - estructuras de datos */
+		// ARRAY - estructuras de datos
 		var numeros = [0,1,2,3,4,5];
 		log(numeros);
 		numeros.push(6);
 		numeros.push(7);
 		log(numeros);
 
-		/* objetos */
-		var persona1 = {} /* puede ser o no necesario*/
+		// objetos 
+		var persona1 = {} // puede ser o no necesario
 		persona1.nombre = "Carlos";
 		persona1.edad = 35;
 		persona1.pais = "uru";
@@ -53,30 +55,25 @@
 		log(persona1.nombre);
 		log(perro.nombre) + log(perro.raza) ;
 
-		/* tomar ejemplos de acceso a los objetos web */
+		// tomar ejemplos de acceso a los objetos web 
 		
-		/* DOM Dcument Object Model*/
+		// DOM Dcument Object Model
 		document.getElementById("unicoDiv");
-
-		/* ejemplo de on windows Load */
+		*/
+		// ejemplo de on windows Load
 		function darBienvenida(){
-			alert("Bienvenido a la web");
+			alert('Bienvenido a la web');
 		}
 
-		function hacerAlgoImportante(){
-			console.log("Estoy haciendo algo importante");
+		function mostrarAlgoEnConsola(){
+			console.log('Estoy mostrando algo');
 		}
 
-		function atachar(obj, evento, funcion){
-			if(obj.addEventListener){
-				obj.addEventListener(evento, funcion);
-			} else {
-				obj.attachEvent('on'+evento, funcion);
-			}
-		}
+		$(window)
+			.on('load', mostrarAlgoEnConsola)
+			.on('load', darBienvenida);
+	
 
-		atachar(window,	'load', darBienvenida);
-		atachar(window,	'load', hacerAlgoImportante);
 	</script>
 </body>
 </html>
