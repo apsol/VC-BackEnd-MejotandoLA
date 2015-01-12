@@ -248,9 +248,13 @@
 			console.log("Estoy haciendo algo importante");
 		}
 
-		$(window)
-			.on('load', darBienvenida);
-			.on('load', hacerAlgoImportante);
+		$(function(){
+			var publicar = document.getElementsByClassName('publicar')[0];
+			$(publicar).on('click', darBienvenida);
+			$(window)
+				.on('load', hacerAlgoImportante);	
+		} )
+		
 
 	</script>
 </body>
