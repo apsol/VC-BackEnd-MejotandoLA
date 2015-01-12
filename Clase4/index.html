@@ -248,11 +248,22 @@
 			console.log("Estoy haciendo algo importante");
 		}
 		// forma corta usando jQuery
+		// ejecutar multiples funciones al hacer click
 		$(function(){
-			$('.publicar').on('click', darBienvenida);
+			$('.publicar')
+				.on('click', darBienvenida)
+				// esta es una funcion no reusable.
+				.on('click', function() {
+					console.log('Me hicieron click');
+				})
 			$(window)
-				.on('load', hacerAlgoImportante);	
-		} )
+				.on('load', hacerAlgoImportante);
+
+			// Como remover una funcion de un evento OFF 
+			$('.publicar')
+				.off('click', darBienvenida)
+
+		} );
 		
 
 	</script>
