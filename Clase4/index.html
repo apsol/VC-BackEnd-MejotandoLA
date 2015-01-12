@@ -247,10 +247,9 @@
 		function hacerAlgoImportante(){
 			console.log("Estoy haciendo algo importante");
 		}
-
+		// forma corta usando jQuery
 		$(function(){
-			var publicar = document.getElementsByClassName('publicar')[0];
-			$(publicar).on('click', darBienvenida);
+			$('.publicar').on('click', darBienvenida);
 			$(window)
 				.on('load', hacerAlgoImportante);	
 		} )
