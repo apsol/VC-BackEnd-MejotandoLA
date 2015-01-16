@@ -302,7 +302,11 @@
 		</article>'; 
 
 		// esto agrega el  elemento nuevo al post.
-		$('.posts').prepend(template);
+		// le pasamos ahora un objeto jQuery
+		$('.posts').prepend($(template).fadeIn(function(){
+			//modofocamos el css para que el fadeIn no deje el elemento solo arriba
+			$(this).css('display', 'inline-block');
+		}));
 		//Limpiamos el formulario 
 		$('input[type=text]').val('');
 		//ocultamos el form
