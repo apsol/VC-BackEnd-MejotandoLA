@@ -48,6 +48,18 @@
 			<li><a href="#">CSS3</a></li>
 		</ul>
 	</nav>
+	<form action="">
+		<p>
+			<label for="titulo">Título</label>
+			<input id="titulo" type="text" name="titulo"></p>
+		<p>
+			<label for="autor">Autor</label>
+			<input id="autor" type="text" name="autor"></p>
+		<p>
+			<label for="tag">Tag</label>
+			<input id="tag" type="text" name="tag"></p>
+			<input value="publicar" type="submit" />
+	</form>
 	<section class="posts">
 		<article class="post">
 			<div class="descripcion">
@@ -239,31 +251,65 @@
 		</h3>
 	</footer>
 	<script>
-		/* ejemplo de on windows Load usando jQuery */
-		function darBienvenida(){
-			alert("Bienvenido a la web");
+	// Mostrar formulario al hacer click en botón
+	$(function(){
+		$('.publicar').on('click', mostrarFormulario);
+
+		function mostrarFormulario() {
+			$('form').slideToggle();
 		}
 
-		function hacerAlgoImportante(){
-			console.log("Estoy haciendo algo importante");
+		//capturar el evento submit para controlarlo..
+		$('form').on('submit', procesarFormulario);
+
+		function procesarFormulario(ev) {
+			//el preventDefault() desabilita  la  recarga de la web
+			ev.preventDefault();
+			//tomamos los valores del imput
+			var titulo = $('input[name=titulo]').val();
+			var autor = $('input[name=autor]').val();
+			var tag = $('input[name=tag]').val();
+
+			var template = '<article class="post"> \
+			<div class="descripcion"> \
+				<figure class="imagen"> \
+					<img src="imagenes/foto.jpg" /> \
+				</figure> \
+				<div class="detalles"> \
+					<h2 class="titulo"> \
+						'+titulo+' \
+					</h2> \
+					<p class="autor"> \
+						por <a href="#">'+autor+'</a> \
+					</p> \
+					<a class="tag" href="#">'+tag+'</a> \
+					<p class="fecha">hace <strong>0</strong> min</p> \
+				</div> \
+			</div> \
+			<div class="acciones"> \
+				<div class="votos"> \
+					<a class="up" href="#"></a> \
+					<span class="total">0</span> \
+					<a class="down" href="#"></a> \
+				</div> \
+				<div class="datos"> \
+					<a class="comentarios" href="#"> \
+						0 \
+					</a> \
+					<a class="estrellita" href="#"></a> \
+				</div> \
+			</div> \
+		</article>'; 
+
+		// esto agrega el  elemento nuevo al post.
+		$('.posts').prepend(template);
+		//Limpiamos el formulario 
+		$('input[type=text]').val('');
+		//ocultamos el form
+		$('form').slideUp;
+
 		}
-		// forma corta usando jQuery
-		// ejecutar multiples funciones al hacer click
-		$(function(){
-			$('.publicar')
-				.on('click', darBienvenida)
-				// esta es una funcion no reusable.
-				.on('click', function() {
-					console.log('Me hicieron click');
-				})
-			$(window)
-				.on('load', hacerAlgoImportante);
-
-			// Como remover una funcion de un evento OFF 
-			$('.publicar')
-				.off('click', darBienvenida)
-
-		} );
+	} );
 		
 
 	</script>
