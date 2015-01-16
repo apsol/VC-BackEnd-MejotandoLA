@@ -343,8 +343,8 @@
 		});
 
 		//
-		function crearContador(){
-			var contador = 0;
+		function crearContador(valorInicial){
+			var contador = valorInicial || 0;
 			return {
 				up : function(){
 					return ++contador;
@@ -356,7 +356,7 @@
 		};
 
 		$('.total').each(function(i, elem) {
-			var contTotal = crearContador();
+			var contTotal = crearContador(elem.innerHTML);
 			$(elem)
 				// los siblings son los helementos hermanos, es decir los que estan al mismo nivel. En este caso pedimos los de 
 				.siblings('.up')
