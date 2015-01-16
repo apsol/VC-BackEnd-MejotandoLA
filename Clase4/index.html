@@ -26,6 +26,11 @@
 					Publicar
 				</a>
 			</div>
+			<div>
+				<a href="#14" class="sizer">A</a>
+				<a href="#16" class="sizer">A</a>
+				<a href="#18" class="sizer">A</a>
+			</div>
 		</div>
 		<div class="usuario">
 			<figure class="avatar">
@@ -317,7 +322,26 @@
 				
 			}
 		}
-	} );
+
+		// creando CLUOSURE
+		//funcion que retorna otra funcion///
+		function crearSizer(pixels){
+			return function(){
+				$('body').css('font-size', pixels+'px');
+			}
+
+		}
+		// each recibe una lista de elementos .sizer en este caso
+		// a cada uno los guardamos link para usarlos.
+		$('.sizer').each(function(i, link){
+			var pixels = $(link).prop('hash').substring(1);
+			$(link)
+				.css('font-size', pixels+'px')
+				.on('click', crearSizer(pixels));
+			// interesante manera de  debuggear
+			//debugger;1
+		});
+	});
 		
 
 	</script>
