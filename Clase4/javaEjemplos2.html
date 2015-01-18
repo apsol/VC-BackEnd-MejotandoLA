@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" 
+		content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Puls4: Comunidad para gente atractiva y millonaria</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/puls4.css" />
+	<script src="jquery-2.0.3.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="imagenes/logo.png" alt="Puls4" />
+		</div>
+		<div class="titular">
+			<h1 class="titulo">
+				Puls4: Comunidad profesional de gente atractiva
+			</h1>
+			<div>
+				<a class="filtro" href="#">
+					Stylus
+				</a>
+				<a class="publicar" href="#">
+					Publicar
+				</a>
+			</div>
+			<div>
+				<a href="#12" class="sizer">A</a>
+				<a href="#14" class="sizer">A</a>
+				<a href="#18" class="sizer">A</a>
+			</div>
+		</div>
+		<div class="usuario">
+			<figure class="avatar">
+				<img src="imagenes/avatar.jpg" alt="freddier" />
+			</figure>
+			<a class="flechita" href="#"></a>
+		</div>
+	</header>
+	<nav>
+		<ul class="menu">
+			<li><a href="#">Python</a></li>
+			<li><a href="#">HTML5</a></li>
+			<li><a href="#">Javascript</a></li>
+			<li><a href="#">Django</a></li>
+			<li><a href="#">CSS3</a></li>
+			<li><a href="#">Python</a></li>
+			<li><a href="#">HTML5</a></li>
+			<li><a href="#">Javascript</a></li>
+			<li><a href="#">Django</a></li>
+			<li><a href="#">CSS3</a></li>
+		</ul>
+	</nav>
+	<!Formulario para crear articulos>
+	<form action="" class="formArticulos">
+		<p>
+			<label for="titulo">Título</label>
+			<input id="titulo" type="text" name="titulo"></p>
+		<p>
+			<label for="autor">Autor</label>
+			<input id="autor" type="text" name="autor"></p>
+		<p>
+			<label for="tag">Tag</label>
+			<input id="tag" type="text" name="tag"></p>
+			<input value="publicar" type="submit" />
+	</form>
+	<section class="posts">
+		<article class="post">
+			<div class="descripcion">
+				<figure class="imagen">
+					<img src="imagenes/foto.jpg" />
+				</figure>
+				<div class="detalles">
+					<h2 class="titulo">
+						Colores, gradientes y texto 3D con Sass y Compass
+					</h2>
+					<p class="autor">
+						por <a href="#">Diana Reyes</a>
+					</p>
+					<a class="tag" href="#">CSS3</a>
+					<p class="fecha">hace <strong>20</strong> min</p>
+				</div>
+			</div>
+			<div class="acciones">
+				<div class="votos">
+					<a class="up" href="#"></a>
+					<span class="total">156</span>
+					<a class="down" href="#"></a>
+				</div>
+				<div class="datos">
+					<a class="comentarios" href="#">
+						10
+					</a>
+					<a class="estrellita" href="#"></a>
+				</div>
+			</div>
+		</article>
+		<article class="post">
+			<div class="descripcion">
+				<figure class="imagen">
+					<img src="imagenes/foto.jpg" />
+				</figure>
+				<div class="detalles">
+					<h2 class="titulo">
+						Colores, gradientes y texto 3D con Sass y Compass
+					</h2>
+					<p class="autor">
+						por <a href="#">Diana Reyes</a>
+					</p>
+					<a class="tag" href="#">CSS3</a>
+					<p class="fecha">hace <strong>20</strong> min</p>
+				</div>
+			</div>
+			<div class="acciones">
+				<div class="votos">
+					<a class="up" href="#"></a>
+					<span class="total">30</span>
+					<a class="down" href="#"></a>
+				</div>
+				<div class="datos">
+					<a class="comentarios" href="#">
+						10
+					</a>
+					<a class="estrellita" href="#"></a>
+				</div>
+			</div>
+		</article>
+	</section>
+	<footer>
+		<h3>
+			<strong>Powered by Platzi</strong>
+			<span class="mejor">
+				mejorando.la 2013
+			</span>
+		</h3>
+	</footer>
+	<script>
+	// Mostrar formulario al hacer click en botón
+	$(function(){
+		$('.publicar').on('click', mostrarFormulario);
+
+		function mostrarFormulario() {
+			$('form').slideToggle();
+		}
+
+		//capturar el evento submit para controlarlo..
+		$('form').on('submit', procesarFormulario);
+
+		function procesarFormulario(ev) {
+			//el preventDefault() desabilita  la  recarga de la web
+			ev.preventDefault();
+			//tomamos los valores del imput
+			var titulo = $('input[name=titulo]').val();
+			var autor = $('input[name=autor]').val();
+			var tag = $('input[name=tag]').val();
+
+			if( titulo=='' || autor=='' || tag=='' ){
+				console.log('Faltan completar datos en el formulario')
+			} else {
+				var template = '<article class="post"> \
+					<div class="descripcion"> \
+						<figure class="imagen"> \
+							<img src="imagenes/foto.jpg" /> \
+						</figure> \
+						<div class="detalles"> \
+							<h2 class="titulo"> \
+								'+titulo+' \
+							</h2> \
+							<p class="autor"> \
+								por <a href="#">'+autor+'</a> \
+							</p> \
+							<a class="tag" href="#">'+tag+'</a> \
+							<p class="fecha">hace <strong>0</strong> min</p> \
+						</div> \
+					</div> \
+					<div class="acciones"> \
+						<div class="votos"> \
+							<a class="up" href="#"></a> \
+							<span class="total">0</span> \
+							<a class="down" href="#"></a> \
+						</div> \
+						<div class="datos"> \
+							<a class="comentarios" href="#"> \
+								0 \
+							</a> \
+							<a class="estrellita" href="#"></a> \
+						</div> \
+					</div> \
+				</article>'; 
+
+				// esto agrega el  elemento nuevo al post.
+				// le pasamos ahora un objeto jQuery
+				$('.posts').prepend($(template).fadeIn(function(){
+					//modofocamos el css para que el fadeIn no deje el elemento solo arriba
+					$(this).css('display', 'inline-block');
+				}));
+				//Limpiamos el formulario 
+				$('input[type=text]').val('');
+				//ocultamos el form
+				$('form').slideUp;
+				
+			}
+		}
+
+		// creando CLUOSURE
+		//funcion que retorna otra funcion///
+		function crearSizer(pixels){
+			return function(){
+				$('body').css('font-size', pixels+'px');
+			}
+
+		}
+		// each recibe una lista de elementos .sizer en este caso
+		// a cada uno los guardamos link para usarlos.
+		$('.sizer').each(function(i, link){
+			var pixels = $(link).prop('hash').substring(1);
+			$(link)
+				.css('font-size', pixels+'px')
+				.on('click', crearSizer(pixels));
+			// interesante manera de  debuggear
+			//debugger;1
+		});
+
+		//
+		function crearContador(valorInicial){
+			var contador = valorInicial || 0;
+			return {
+				up : function(){
+					return ++contador;
+				},
+				down : function(){
+					return --contador;
+				}
+			};
+		};
+
+		$('.total').each(function(i, elem) {
+			var contTotal = crearContador(elem.innerHTML);
+			$(elem)
+				// los siblings son los helementos hermanos, es decir los que estan al mismo nivel. En este caso pedimos los de 
+				.siblings('.up')
+					.on('click', function(ev){
+						ev.preventDefault();
+						$(elem).html(contTotal.up());
+					})
+				.siblings('.down')
+					.on('click', function(ev){
+						ev.preventDefault();
+						$(elem).html(contTotal.down());		
+					});
+		});
+	});
+		
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
