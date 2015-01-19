@@ -36,6 +36,7 @@ footer h3 .mejor:after {
 form {
   background: #fff;
   border: 1px solid #000;
+  float: left;
   padding: 0.8em;
   margin: 10px 10px 10px 10px;
 }

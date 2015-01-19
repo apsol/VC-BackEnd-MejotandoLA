@@ -10,3 +10,5 @@ Comandos para Node JS para  creal los  css  a partir de los .styl:
 2- stylus --watch stylus/main.styl
 
 3- stylus stylus/main.styl --out /css --compress   // en caso de no estar dentro de la carpeta directamente .
+
+form>p*3>label{nombre}>^input
