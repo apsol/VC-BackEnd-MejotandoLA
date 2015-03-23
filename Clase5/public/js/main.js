@@ -7,7 +7,7 @@ $(document).ready(function(){
 		//agregamos nuevas vistas aqui...
 		var view = new Puls3.Views.Article( {model: model})
 		view.render();
-		view.$el.appendTo('body');
+		view.$el.appendTo('.posts');
 
 	} );
 
